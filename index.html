@@ -7,8 +7,9 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
- 
+Faith Folorunso
+// Added my name as Author 2
+
 Further Information:
 http://cns.utexas.edu/fri
  
@@ -17,8 +18,8 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
- 
+The goal is work on creating an HTML5 drawing canvas (with a border) that is able to fit any device screen as well include diiferent buttons. One button should produce a rectangle,
+one should display my name, one should display an image, and another should clear everything. 
 Known Issues:
 blah, blah, blah, blah
 https://www.w3schools.com/w3css/default.asp
@@ -77,6 +78,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
-
+	
+class="w3-btn w3-black"> Rectangle </a>
+var canvas = document.getElementById("myCanvas");
+var context = canvas.getContext("2d");
+context.fillStyle = "rgba(0, 0, 255, .5)";
+context.fillRect(25, 25, 125, 125);
+// 03/24/2021 11:39 AM-first attempt at trying to produce a rectangle
+// Added the button that should be pressed to produce rectangle 
 </body>
 </html>
