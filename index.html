@@ -19,7 +19,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of this assignment is to learn how to display thing such as an image or shape onto a cnavas. The goal of this code is to have 4 buttons, each with a diffrerent purpose. 
+The goal of this assignment is to learn how to display thing such as an image or shape onto a canvas. The goal of this code is to have 4 buttons, each with a different purpose. 
 One button draws a rectangle on the canvas, another button puts one's name on the canvas, another button loads an image of something onto the canvas, and the last button clears the canvas.
 <!--Added in Goal of Code instead of blah, blah, blah--!>
 
@@ -47,7 +47,6 @@ var docMod = document.lastModified; // loads last modified time stamp into docMo
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
 	
-onclick="draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!--Ebutton that should be pressed to present the rectangle on a canvas--!>
 function draw_art() {
   var art_canvas = document.getElementById("art"); <!--canvas element--!>
   var art_context = art_canvas.getContext("2d"); <!--Changed "b" to "art"--!>
@@ -95,6 +94,8 @@ function draw_art() {
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
 <canvas id= "art" width= "350" height="200" style="border:1px solid #000000;">
+onclick="draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!-The button that should be pressed to present the rectangle on a canvas--!>
+	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
