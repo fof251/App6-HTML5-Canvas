@@ -42,12 +42,25 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	
 var docMod = document.lastModified; // loads last modified time stamp into docMod variable
 alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
 console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+onclick="draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!--Ebutton that should be pressed to present the rectangle on a canvas--!>
+function draw_art() {
+  var art_canvas = document.getElementById("art"); <!--canvas element--!>
+  var art_context = art_canvas.getContext("2d"); <!--Changed "b" to "art"--!>
+  art_context.fillRect(50, 25, 100, 120);} <!--fillStyle gradient--!>
+  var art_grd = context.createRadialGradient (120, 90, 10, 90, 70, 80); <!--dimensions for gradient--!>
+  art_grd.addColorStop(0, "red"); <!--red is the main color--!>
+  art_grd.addColorStop(1, "pink") <!--it will then gradient into pink--!>
+<!--This is the button function that is supposed to draw a rectangle on a canvas--!>
+<!--This function was in the wrong place before so it appeared as text instead of being actual code--!>
+<!--Also did not work because I was calling the wrong name and the wrong canvas--!>
+
 </script>
-
-
+	
 
 <style>	
 .body {
@@ -75,15 +88,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 </div>
 	
 <div id="content" class="w3-container">
-	<p> onclick="draw_b();" class="w3-btn w3-black">  Click Me! </a>
-function draw_b() {
-  var b_canvas = document.getElementById("b");
-  var b_context = b_canvas.getContext("2d");
-  b_context.fillRect(50, 25, 150, 100);} </p>
+	<p> Using a drawing canvas </p>
 
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+</div>
+<canvas id= "art" width= "350" height="200" style="border:1px solid #000000;">
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
