@@ -7,7 +7,9 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
 Authors in chronological order of contribution:
 Tim Riedel
-Author 2
+Faith Folorunso
+<!--Changed "Author 2" to my first and last name--!>
+
  
 Further Information:
 http://cns.utexas.edu/fri
@@ -17,10 +19,16 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
- 
+The goal of this assignment is to learn how to display thing such as an image or shape onto a cnavas. The goal of this code is to have 4 buttons, each with a diffrerent purpose. 
+One button draws a rectangle on the canvas, another button puts one's name on the canvas, another button loads an image of something onto the canvas, and the last button clears the canvas.
+<!--Added in Goal of Code instead of blah, blah, blah--!>
+
+
 Known Issues:
-blah, blah, blah, blah
+There are no known issues in App 6.
+<!--Edited blah, blah, blah--!>
+
+
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
 -->
@@ -69,7 +77,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 	
 <div id="content" class="w3-container">
 	<p>Content goes here.</p>
-		
+		onclick="canvas" class="w3-btn w3-black">  Yes </a>
+	        var canvas = document.getElementById("myCanvas");
+                var context = canvas.getContext("2d");
+                context.fillStyle = "rgba(0, 0, 255, .5)";
+                context.fillRect(25, 25, 125, 125);
+	        <!--Added in button function--!>
+
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
