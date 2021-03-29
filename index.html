@@ -50,7 +50,7 @@ function draw_art() {
   var art_canvas = document.getElementById("art"); <!--canvas element--!>
   var art_context = art_canvas.getContext("2d"); <!--Changed "b" to "art"--!>
   art_context.fillRect(50, 25, 150, 100); <!--fillStyle gradient--!>
-  var art_grd = context.createRadialGradient (115, 95, 5, 90, 70, 80); <!--dimensions for gradient--!>
+  var art_grd = art_context.createRadialGradient (115, 95, 5, 90, 70, 80); <!--dimensions for gradient--!>
   art_grd.addColorStop(0, "red"); <!--red is the main color--!>
   art_grd.addColorStop(1, "pink") <!--it will then gradient into pink--!>
   context.fillStyle = art_grd;
@@ -62,11 +62,9 @@ function draw_art() {
 
 function text_art () {
 var art_canvas = document.getElementById("art");
-var art_context = canvas.getContext("2d");
-art_context.font = "30px Comic Sans MS";
-art_context.fillStyle = "red";
-art_context.textAlign = "center";
-context.fillText("Faith F", canvas.width/2, canvas.height/2);
+var art_context = art_canvas.getContext("2d");
+art_context.font = "30px Arial";
+art_context.fillText("Faith F", 10, 50);
 };
 
 </script>
