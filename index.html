@@ -49,9 +49,6 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function draw_art() {
   var art_canvas = document.getElementById("art"); <!--canvas element--!>
   var art_context = art_canvas.getContext("2d"); <!--Changed "b" to "art"--!>
-  var grd = art_context.createRadialGradient (75, 50, 5, 90, 60, 100); <!--dimensions for gradient--!>
-  grd.addColorStop(0, "red"); <!--red is the main color--!>
-  grd.addColorStop(1, "white") <!--it will then gradient into white (lighter red)--!>
   art_context.fillStyle = grd
   art_context.fillRectangle(10, 10, 150, 80);
 };
