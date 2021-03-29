@@ -60,6 +60,15 @@ function draw_art() {
 <!--This function was in the wrong place before so it appeared as text instead of being actual code--!>
 <!--Also did not work because I was calling the wrong name and the wrong canvas--!>
 
+function text_art () {
+var art_canvas = document.getElementById("art");
+var art_context = canvas.getContext("2d");
+context.font = "30px Comic Sans MS";
+context.fillStyle = "red";
+context.textAlign = "center";
+context.fillText("Faith F", canvas.width/2, canvas.height/2);
+};
+
 </script>
 	
 
@@ -97,12 +106,14 @@ function draw_art() {
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
 
-<canvas id= "art" width= "350" height="200" style= "border:3px solid #000000;">
+<canvas id= "art" width= "500" height="400" style= "border:4px solid #000000;">
 </canvas> <!--Border for canvas--!>
-
+<!--changed height and width of canvas to make it taller and wider--!>
 </div>
 
-<a onclick= "draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!-The button that should be pressed to present the rectangle on a canvas--!>
+<a onclick= "draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!--The button that should be pressed to present the rectangle on the canvas--!>
+<a onclick= "text_art();" class="w3-btn w3-red">  Click Me too! </a> <!--The button that should be pressed to present text (my name) on the canvas--!>
+
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
