@@ -67,13 +67,17 @@ art_context.font = "30px Arial";
 art_context.fillText("Faith F", 10, 50);
 };
 
-window.onload = function image_art () {
+function image_art () {
   var art_canvas = document.getElementById("art");
   var art_context = canvas.getContext("2d");
   var img = document.getElementById("MickeyMouse");
   art_context.drawImage(img, 10, 10);
 };
 
+function clear_art {
+const context = canvas.getContext('2d');
+context.clearRect(0, 0, canvas.width, canvas.height);
+};
 </script>
 	
 
@@ -126,7 +130,8 @@ img, object{
 
 <a onclick= "draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!--The button that should be pressed to present the rectangle on the canvas--!>
 <a onclick= "text_art();" class="w3-btn w3-red">  Click Me too! </a> <!--The button that should be pressed to present text (my name) on the canvas--!>
-<a onclick= "image_art();" class="w3-btn w3-green">  No, Click Me! </a> <!--The button that should be pressed to present text (my name) on the canvas--!>
+<a onclick= "image_art();" class="w3-btn w3-green">  No, Click Me! </a> <!--The button that should be pressed to presentimage on the canvas--!>
+<a onclick= "clear_art();" class="w3-btn w3-black">  Clear Me! </a> <!--The button that should be pressed to present to clear the canvas--!>
 
 
 	
