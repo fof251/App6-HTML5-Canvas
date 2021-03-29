@@ -49,11 +49,11 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function draw_art() {
   var art_canvas = document.getElementById("art"); <!--canvas element--!>
   var art_context = art_canvas.getContext("2d"); <!--Changed "b" to "art"--!>
-  art_context.fillRect(50, 25, 150, 100); <!--fillStyle gradient--!>
-  var art_grd = art_context.createRadialGradient (115, 95, 5, 90, 70, 80); <!--dimensions for gradient--!>
-  art_grd.addColorStop(0, "red"); <!--red is the main color--!>
-  art_grd.addColorStop(1, "pink") <!--it will then gradient into pink--!>
-  context.fillStyle = art_grd;
+  var grd = art_context.createRadialGradient (75, 50, 5, 90, 60, 100); <!--dimensions for gradient--!>
+  grd.addColorStop(0, "red"); <!--red is the main color--!>
+  grd.addColorStop(1, "white") <!--it will then gradient into white (lighter red)--!>
+  art_context.fillStyle = grd
+  art_context.fillRectangle(10, 10, 150, 80);
 };
 
 <!--This is the button function that is supposed to draw a rectangle on a canvas--!>
@@ -65,6 +65,13 @@ var art_canvas = document.getElementById("art");
 var art_context = art_canvas.getContext("2d");
 art_context.font = "30px Arial";
 art_context.fillText("Faith F", 10, 50);
+};
+
+window.onload = function image_art () {
+  var art_canvas = document.getElementById("art");
+  var ctx = canvas.getContext("2d");
+  var img = document.getElementById("MickeyMouse");
+  ctx.drawImage(img, 10, 10);
 };
 
 </script>
@@ -89,6 +96,12 @@ art_context.fillText("Faith F", 10, 50);
     left: 0vw;
     z-index: 1;
 }
+
+img, object{
+            	max-height:90%;
+        	max-width:90%;
+        	}
+ <!--function that resizes an image based on screen size--!>
 </style>
 
 <body>
@@ -97,6 +110,8 @@ art_context.fillText("Faith F", 10, 50);
 </div>
 	
 <div id="content" class="w3-container">
+<img src="https://yt3.ggpht.com/ytc/AAUvwnizY0dv80efccMA3OPWFU8gfBHoGA98Rvg9_xGrtg=s900-c-k-c0x00ffffff-no-rj" alt="MickeyMouse"
+
 	<p> Using a drawing canvas </p>
 
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
