@@ -28,9 +28,8 @@ One button draws a rectangle on the canvas, another button puts one's name on th
 There are no known issues in App 6.-->
 <!--Edited blah, blah, blah--!>
 
-
-https://www.w3schools.com/w3css/default.asp
-https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file-->
+<!--https://www.w3schools.com/w3css/default.asp
+https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file--!>
 	
    <head> 
       <title>App6---HTML5-Canvas</title>  
@@ -50,10 +49,13 @@ console.log("This file last modified " + docMod); // generates message in javaSc
 function draw_art() {
   var art_canvas = document.getElementById("art"); <!--canvas element--!>
   var art_context = art_canvas.getContext("2d"); <!--Changed "b" to "art"--!>
-  art_context.fillRect(50, 25, 100, 120);} <!--fillStyle gradient--!>
-  var art_grd = context.createRadialGradient (120, 90, 10, 90, 70, 80); <!--dimensions for gradient--!>
+  art_context.fillRect(50, 25, 150, 100); <!--fillStyle gradient--!>
+  var art_grd = context.createRadialGradient (115, 95, 5, 90, 70, 80); <!--dimensions for gradient--!>
   art_grd.addColorStop(0, "red"); <!--red is the main color--!>
   art_grd.addColorStop(1, "pink") <!--it will then gradient into pink--!>
+  context.fillStyle = art_grd;
+};
+
 <!--This is the button function that is supposed to draw a rectangle on a canvas--!>
 <!--This function was in the wrong place before so it appeared as text instead of being actual code--!>
 <!--Also did not work because I was calling the wrong name and the wrong canvas--!>
@@ -62,6 +64,7 @@ function draw_art() {
 	
 
 <style>	
+
 .body {
      margin: 0em;
 }
@@ -93,8 +96,13 @@ function draw_art() {
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
-<canvas id= "art" width= "350" height="200" style="border:1px solid #000000;">
-onclick="draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!-The button that should be pressed to present the rectangle on a canvas--!>
+
+<canvas id= "art" width= "350" height="200" style= "border:3px solid #000000;">
+</canvas> <!--Border for canvas--!>
+
+</div>
+
+<a onclick= "draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!-The button that should be pressed to present the rectangle on a canvas--!>
 	
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
