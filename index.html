@@ -46,8 +46,11 @@ alert("This file last modified " + docMod); // generates alert box with time sta
 console.log("This file last modified " + docMod); // generates message in JavaScript console (found in developers tools) with time stamp. 
 	
 function draw_art() {
-  var art_canvas = document.getElementById("art"); <!--canvas element--!>
+var art_canvas = document.getElementById("art"); <!--canvas element--!>
   var art_context = art_canvas.getContext("2d"); <!--Changed "b" to "art"--!>
+  var grd = art_context.createRadialGradient (75, 50, 5, 90, 60, 100); <!--dimensions for gradient--!>
+  grd.addColorStop(0, "red"); <!--red is the main color--!>
+  grd.addColorStop(1, "white") <!--it will then gradient into white (lighter red)--!>
   art_context.fillStyle = grd
   art_context.fillRectangle(10, 10, 150, 80);
 };
@@ -111,7 +114,7 @@ function image_art () {
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 </div>
 
-<canvas id= "art" width= "500" height="400" style= "border:4px solid #000000;">
+<canvas id= "art" width= "300" height="200" style= "border:4px solid #000000;">
 </canvas> <!--Border for canvas--!>
 <!--changed height and width of canvas to make it taller and wider--!>
 </div>
