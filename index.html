@@ -48,7 +48,7 @@ console.log("This file last modified " + docMod); // generates message in JavaSc
 function draw_art() {
 var art_canvas = document.getElementById("art"); //canvas element.
 var art_context = art_canvas.getContext("2d"); //Changed "b" to "art".
-art_context.fillRectangle(50, 50, 150, 80); //Changed coordinates of rectangle.
+art_context.fillRect(50, 50, 150, 80); //Changed coordinates of rectangle.
 }
 
 //This is the button function that is supposed to draw a rectangle on a canvas
@@ -67,7 +67,7 @@ function image_art () {
   var art_canvas = document.getElementById("art");
   var art_context = art_canvas.getContext("2d");
   var art_img = document.getElementById("https://yt3.ggpht.com/ytc/AAUvwnizY0dv80efccMA3OPWFU8gfBHoGA98Rvg9_xGrtg=s900-c-k-c0x00ffffff-no-rj");
-  art_context.drawImage(img, 10, 10);
+  art_context.drawImage("img", 10, 10);
 }
 
 </script>
