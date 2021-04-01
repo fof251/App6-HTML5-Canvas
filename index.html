@@ -48,12 +48,8 @@ console.log("This file last modified " + docMod); // generates message in JavaSc
 function draw_art() {
 var art_canvas = document.getElementById("art"); //canvas element
   var art_context = art_canvas.getContext("2d"); //Changed "b" to "art"
-  var art_grd = art_context.createRadialGradient (75, 50, 5, 90, 60, 100); //dimensions for gradient
-  art_grd.addColorStop(0, "red"); //red is the main color
-  art_grd.addColorStop(1, "white") //it will then gradient into white (lighter red)
-  art_context.fillStyle = art_grd
   art_context.fillRectangle(10, 10, 150, 80);
-};
+}
 
 //This is the button function that is supposed to draw a rectangle on a canvas
 //This function was in the wrong place before so it appeared as text instead of being actual code
@@ -64,7 +60,7 @@ var art_canvas = document.getElementById("art");
 var art_context = art_canvas.getContext("2d");
 art_context.font = "30px Arial";
 art_context.fillText("Faith F", 10, 50);
-};
+}
 
 
 function image_art () {
@@ -72,7 +68,7 @@ function image_art () {
   var art_context = art_canvas.getContext("2d");
   var art_img = document.getElementById("https://yt3.ggpht.com/ytc/AAUvwnizY0dv80efccMA3OPWFU8gfBHoGA98Rvg9_xGrtg=s900-c-k-c0x00ffffff-no-rj");
   art_context.drawImage(img, 10, 10);
-};
+}
 
 </script>
 
@@ -107,7 +103,7 @@ function image_art () {
 	
 <div id="content" class="w3-container">
 
-	<p> Using a drawing canvas </p>
+	<p> Using A Drawing Canvas </p>
 
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -116,12 +112,12 @@ function image_art () {
 
 <canvas id= "art" width= "300" height="200" style= "border:4px solid #000000;">
 </canvas> <!--Border for canvas--!>
-//changed height and width of canvas to make it taller and wider
+<!--changed height and width of canvas to make it taller and wider--!>
 </div>
 
-<a onclick= "draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!--The button that should be pressed to present the rectangle on the canvas--!>
-<a onclick= "text_art();" class="w3-btn w3-red">  Click Me too! </a> <!--The button that should be pressed to present text (my name) on the canvas--!>
-<a onclick= "image_art();" class="w3-btn w3-green">  No, Click Me! </a> <!--The button that should be pressed to presentimage on the canvas--!>
+<a onclick= "draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!--The button that should be pressed to present the rectangle on the canvas.--!>
+<a onclick= "text_art();" class="w3-btn w3-red">  Click Me too! </a> <!--The button that should be pressed to present text (my name) on the canvas.--!>
+<a onclick= "image_art();" class="w3-btn w3-green">  No, Click Me! </a> <!--The button that should be pressed to presentimage on the canvas.--!>
 
 	
 
