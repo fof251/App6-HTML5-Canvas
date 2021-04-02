@@ -66,9 +66,9 @@ function text_art () {
 function image_art () {
 	var art_canvas = document.getElementById("art");
 	var art_context = art_canvas.getContext("2d");
-	var mouse = new Image();
-	mouse.src = 'Mickey_Mouse.jpg'
-	art_context.drawImage(mouse, 5, 5);
+	var apple = new Image();
+	apple.src = 'apple.jpg'
+	art_context.drawImage(apple, 5, 5);
 }
 
 function clear_art () {
@@ -77,8 +77,7 @@ function clear_art () {
 	art_context.clearRect(0, 0, 300, 200);
 }
 
-
-//The image is a picture of Mickey Mouse
+//The image is a picture of a red apple.
 
 </script>
 
