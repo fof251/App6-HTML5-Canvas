@@ -41,14 +41,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	
 <script>
-var docMod = document.lastModified; // loads last modified time stamp into docMod variable
-alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
-console.log("This file last modified " + docMod); // generates message in JavaScript console (found in developers tools) with time stamp. 
+       var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+       alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+       console.log("This file last modified " + docMod); // generates message in JavaScript console (found in developers tools) with time stamp. 
 	
 function draw_art() {
-var art_canvas = document.getElementById("art"); //canvas element.
-var art_context = art_canvas.getContext("2d"); //Changed "b" to "art".
-art_context.fillRect(50, 50, 120, 60); //Changed coordinates of rectangle.
+	var art_canvas = document.getElementById("art"); //canvas element.
+	var art_context = art_canvas.getContext("2d"); //Changed "b" to "art".
+	art_context.fillRect(50, 50, 120, 60); //Changed coordinates of rectangle.
 }
 
 //This is the button function that is supposed to draw a rectangle on a canvas
@@ -56,26 +56,26 @@ art_context.fillRect(50, 50, 120, 60); //Changed coordinates of rectangle.
 //Also did not work because I was calling the wrong name and the wrong canvas
 
 function text_art () {
-var art_canvas = document.getElementById("art");
-var art_context = art_canvas.getContext("2d");
-art_context.font = "30px Arial";
-art_context.fillText("Faith F", 10, 50);
+	var art_canvas = document.getElementById("art");
+	var art_context = art_canvas.getContext("2d");
+	art_context.font = "30px Arial";
+	art_context.fillText("Faith F", 10, 50);
 }
 
 
 function image_art () {
-var art_canvas = document.getElementById("art");
-var art_context = art_canvas.getContext("2d");
-var mouse = new Image();
-mouse.src = 'Mickey_Mouse.jpg'
-art_context.drawImage(mouse, 20, 30);
+	var art_canvas = document.getElementById("art");
+	var art_context = art_canvas.getContext("2d");
+	var mouse = new Image();
+	mouse.src = 'Mickey_Mouse.jpg'
+	art_context.drawImage(mouse, 20, 30);
 }
 
 function clear_art () {
-const context = canvas.getContext('2d');
-context.clearRect(0, 0, canvas.width, canvas.height);
+	var art_canvas = document.getElementById("art");
+	var art_context = art_canvas.getContext("2d");
+	art_context.clearRect(0, 0, 300, 200);
 }
-
 
 
 //The image is a picture of Mickey Mouse
