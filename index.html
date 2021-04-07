@@ -67,23 +67,25 @@ function text_art () {
 
 function image_art () {
 	var art_canvas = document.getElementById("art");
-	var art_context = art_canvas.getContext("2d");
-	var apple = new Image();
-	apple.src = 'apple1.jpg'
-	art_context.drawImage(apple, 5, 5);
+	var art_context = art_canvas.getContext("2d"); //came back and added art in front of context because it did not work before with just context 
+	var apple = new Image(); //creation of the apple variable
+	apple.src = 'apple1.jpg' //This line of code calls for the attached apple1.jpg file attached separtely  
+	art_context.drawImage(apple, 5, 5); //changed from (20,10) to (5,5) because the whole image did not show up on the canvas
 }
 //This is the button that is supposed to make an image display on the canvas
 //The image is in JPG format
 //The image is a small animated apple that I retrieved from Google Images
 
+
 function clear_art () {
 	var art_canvas = document.getElementById("art"); //canvas element (must include in each button function)
-	var art_context = art_canvas.getContext("2d");
-	art_context.clearRect(0, 0, 300, 200); //The rectangle this code is referring to is the canvas
+	var art_context = art_canvas.getContext("2d"); //came back and added art in front of context because it did not work before with just context 
+	art_context.clearRect(0, 0, 300, 200); //The rectangle this line of code is referring to is the entire canvas
 }
 
 //This is the button that should be pressed to clear all elements on the canvas
 //In other words, when this button is pressed the canvas returns to its original blank and empty state
+
 </script>
 
 
@@ -112,12 +114,12 @@ function clear_art () {
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>App6---HTML5-Canvas</h1>
+	<h1>App6--HTML5-Canvas</h1> <!--Title of the app--!>
 </div>
 	
 <div id="content" class="w3-container">
 
-	<p> Using A Drawing Canvas </p>
+	<p> Using A Drawing Canvas </p> <!--Title of my canvas--!>
 
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
@@ -126,7 +128,7 @@ function clear_art () {
 
 <canvas id= "art" width= "300" height="200" style= "border:4px solid #000000;">
 </canvas> <!--Border for canvas--!>
-<!--changed height and width of canvas to make it taller and wider--!>
+<!--changed height and width of canvas to make it smaller and less wide because it was too big for the screen and hard to find the buttons--!>
 </div>
 
 <a onclick= "draw_art();" class="w3-btn w3-blue">  Click Me! </a> <!--The button that should be pressed to present the rectangle on the canvas.--!>
@@ -138,7 +140,7 @@ function clear_art () {
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
-
+<!--Orange footer at the bottom of the app--!>
 
 </body>
 </html>
