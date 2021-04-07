@@ -56,12 +56,14 @@ function draw_art() {
 //Also did not work because I was calling the wrong name and the wrong canvas
 
 function text_art () {
-	var art_canvas = document.getElementById("art");
-	var art_context = art_canvas.getContext("2d");
-	art_context.font = "30px Arial";
-	art_context.fillText("Faith F", 10, 50);
+	var art_canvas = document.getElementById("art"); //canvas element
+	var art_context = art_canvas.getContext("2d"); //came back and added art in front of context because it did not work before with just context 
+	art_context.font = "30px Arial"; //My name (the text) is written in 30 pt Arial black font 
+	art_context.fillText("Faith F", 10, 50); //The text that should appear should say "Faith F"
 }
 
+//This is the button function that is supposed to make text (my name) appear on the canvas
+//The function does not work when I do not include "art" in front of canvas and context 
 
 function image_art () {
 	var art_canvas = document.getElementById("art");
@@ -70,15 +72,18 @@ function image_art () {
 	apple.src = 'apple1.jpg'
 	art_context.drawImage(apple, 5, 5);
 }
+//This is the button that is supposed to make an image display on the canvas
+//The image is in JPG format
+//The image is a small animated apple that I retrieved from Google Images
 
 function clear_art () {
-	var art_canvas = document.getElementById("art");
+	var art_canvas = document.getElementById("art"); //canvas element (must include in each button function)
 	var art_context = art_canvas.getContext("2d");
-	art_context.clearRect(0, 0, 300, 200);
+	art_context.clearRect(0, 0, 300, 200); //The rectangle this code is referring to is the canvas
 }
 
-//The image is a picture of a red apple.
-
+//This is the button that should be pressed to clear all elements on the canvas
+//In other words, when this button is pressed the canvas returns to its original blank and empty state
 </script>
 
 
